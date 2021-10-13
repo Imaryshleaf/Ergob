@@ -1,0 +1,1 @@
+npm i nodemon@2.0.7 --save

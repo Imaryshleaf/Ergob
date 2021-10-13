@@ -1,0 +1,26 @@
+About Software:
+1. At the first run, the software will ask to enter username! 
+2. Click ok, then software will close and create a new folder and 2 json files inside it.
+2. 2nd run, the software should showing the actual GUI
+
+How to use:
+1. Go to settings
+2. Setup your keybinds there, if your quick attack key in the game is "c' then you choose "c" and and so on.
+3. If all done, please click all the update buttons, then CLOSE the software THEN START it again.
+4. To check the changes: go to "collection" folder > edit "keybinds.json" with notepad > check it, make sure they are changed and they are not set to "None"
+5. Click any weapon icon there (depend on whats legend you use) and choose any key (trigger key) that not in use. Then try it on the training mode.
+
+Note:
+1. If this software doesn't work at all after following the tutorial how to use it, please remove or just get rid this software from your PC.
+2. This software doesn't work on 32 bit OS
+3. You don't need to worry about the settings on the software if the controller set it to "None" after restart.
+
+Important to know:
+1. PLEASE DO NOT HOLD THE TRIGGER KEY OVER 2-3 SECONDS, the software will mess up your controller.
+2. If the white box say something like "INPUT NOT PROVIDED" that mean you have to press key (move) "left" or "right" as the inputs.
+
+Example usage if the input is required:
+1. Press the key (move) left or light + trigger key
+
+Example usage if the input is not required:
+1. Press trigger key (without pressing key (move) left + right: You can press it if needed in necessary situation)

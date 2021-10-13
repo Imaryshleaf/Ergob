@@ -1,0 +1,1 @@
+pyinstaller ergo.py --add-data "icon/*.ico;icon" --add-data "images/*.png;images" --add-data "inputs/*.py;inputs" --add-data "modules/*.py;modules" --add-data "weapons/*.py;weapons" --add-data "ergo.ico;." -i E:/Py/Macro/ErgoB/ergo.ico --noconsole --onefile

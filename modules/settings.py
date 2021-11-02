@@ -54,7 +54,7 @@ def Open(widget):
 			applicationData["AvatarLocation"] = filename.name;
 			with open (os.getcwd() + '/collections/application.json', 'w+') as f:
 				json.dump(applicationData, f, indent=4, sort_keys=False)
-			sys.exit(1)
+			# sys.exit(1)
 		except Exception:
 			print("Cancelled update avatar")
 			UpdateAvatarButton["state"] = "enabled"
@@ -65,7 +65,7 @@ def Open(widget):
 		applicationData["AnimationSpeed"] = FrameRateTxt.get();
 		with open (os.getcwd() + '/collections/application.json', 'w+') as f:
 			json.dump(applicationData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 
 	app = tk.Toplevel()
@@ -108,7 +108,7 @@ def Open(widget):
 		keybindData["Move Up"] = MoveUpTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveUpLabel = tk.Label(appMarg1, text="Move Up:")
 	MoveUpLabel.grid(row=1,column=1)
@@ -116,7 +116,7 @@ def Open(widget):
 	MoveUpKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveUpTxt, state='readonly')
 	MoveUpKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveUpKey.grid(row=1,column=2)
-	MoveUpKey.set('None')
+	MoveUpKey.set(keybindData["Move Up"])
 	MoveUpUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveUpKey)
 	MoveUpUpdateButton.grid(row=1,column=3)
 
@@ -126,7 +126,7 @@ def Open(widget):
 		keybindData["Move Down"] = MoveDownTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveDownLabel = tk.Label(appMarg1, text="Move Down:")
 	MoveDownLabel.grid(row=2,column=1)
@@ -134,7 +134,7 @@ def Open(widget):
 	MoveDownKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveDownTxt, state='readonly')
 	MoveDownKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveDownKey.grid(row=2,column=2)
-	MoveDownKey.set('None')
+	MoveDownKey.set(keybindData["Move Down"])
 	MoveDownUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveDownKey)
 	MoveDownUpdateButton.grid(row=2,column=3)
 
@@ -144,7 +144,7 @@ def Open(widget):
 		keybindData["Move Left"] = MoveLeftTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveLeftLabel = tk.Label(appMarg1, text="Move Left:")
 	MoveLeftLabel.grid(row=3,column=1)
@@ -152,7 +152,7 @@ def Open(widget):
 	MoveLeftKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveLeftTxt, state='readonly')
 	MoveLeftKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveLeftKey.grid(row=3,column=2)
-	MoveLeftKey.set('None')
+	MoveLeftKey.set(keybindData["Move Left"])
 	MoveLeftUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveLeftKey)
 	MoveLeftUpdateButton.grid(row=3,column=3)
 
@@ -162,7 +162,7 @@ def Open(widget):
 		keybindData["Move Right"] = MoveRightTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveRightLabel = tk.Label(appMarg1, text="Move Right:")
 	MoveRightLabel.grid(row=4,column=1)
@@ -170,7 +170,7 @@ def Open(widget):
 	MoveRightKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveRightTxt, state='readonly')
 	MoveRightKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveRightKey.grid(row=4,column=2)
-	MoveRightKey.set('None')
+	MoveRightKey.set(keybindData["Move Right"])
 	MoveRightUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveRightKey)
 	MoveRightUpdateButton.grid(row=4,column=3)
 
@@ -180,7 +180,7 @@ def Open(widget):
 		keybindData["Jump"] = MoveJumpTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveJumpLabel = tk.Label(appMarg1, text="Jump:")
 	MoveJumpLabel.grid(row=5,column=1)
@@ -188,7 +188,7 @@ def Open(widget):
 	MoveJumpKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveJumpTxt, state='readonly')
 	MoveJumpKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveJumpKey.grid(row=5,column=2)
-	MoveJumpKey.set('None')
+	MoveJumpKey.set(keybindData["Jump"])
 	MoveJumpUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveJumpKey)
 	MoveJumpUpdateButton.grid(row=5,column=3)
 
@@ -198,7 +198,7 @@ def Open(widget):
 		keybindData["Dodge"] = MoveDodgeTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveDodgeLabel = tk.Label(appMarg1, text="Dodge:")
 	MoveDodgeLabel.grid(row=6,column=1)
@@ -206,7 +206,7 @@ def Open(widget):
 	MoveDodgeKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveDodgeTxt, state='readonly')
 	MoveDodgeKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveDodgeKey.grid(row=6,column=2)
-	MoveDodgeKey.set('None')
+	MoveDodgeKey.set(keybindData["Dodge"])
 	MoveDodgeUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveDodgeKey)
 	MoveDodgeUpdateButton.grid(row=6,column=3)
 
@@ -216,7 +216,7 @@ def Open(widget):
 		keybindData["Throw"] = MoveThrowTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveThrowLabel = tk.Label(appMarg1, text="Throw:")
 	MoveThrowLabel.grid(row=7,column=1)
@@ -224,7 +224,7 @@ def Open(widget):
 	MoveThrowKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveThrowTxt, state='readonly')
 	MoveThrowKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveThrowKey.grid(row=7,column=2)
-	MoveThrowKey.set('None')
+	MoveThrowKey.set(keybindData["Throw"])
 	MoveThrowUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveThrowKey)
 	MoveThrowUpdateButton.grid(row=7,column=3)
 
@@ -234,7 +234,7 @@ def Open(widget):
 		keybindData["Pickup"] = MovePickupTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MovePickupLabel = tk.Label(appMarg1, text="Pickup:")
 	MovePickupLabel.grid(row=8,column=1)
@@ -242,7 +242,7 @@ def Open(widget):
 	MovePickupKey =ttk.Combobox(appMarg1, width=15, textvariable=MovePickupTxt, state='readonly')
 	MovePickupKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MovePickupKey.grid(row=8,column=2)
-	MovePickupKey.set('None')
+	MovePickupKey.set(keybindData["Pickup"])
 	MovePickupUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMovePickupKey)
 	MovePickupUpdateButton.grid(row=8,column=3)
 
@@ -252,7 +252,7 @@ def Open(widget):
 		keybindData["Quick Attack"] = MoveQuickAttackTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveQuickAttackLabel = tk.Label(appMarg1, text="Quick Attack:")
 	MoveQuickAttackLabel.grid(row=9,column=1)
@@ -260,7 +260,7 @@ def Open(widget):
 	MoveQuickAttackKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveQuickAttackTxt, state='readonly')
 	MoveQuickAttackKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveQuickAttackKey.grid(row=9,column=2)
-	MoveQuickAttackKey.set('None')
+	MoveQuickAttackKey.set(keybindData["Quick Attack"])
 	MoveQuickAttackUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveQuickAttackKey)
 	MoveQuickAttackUpdateButton.grid(row=9,column=3)
 
@@ -270,7 +270,7 @@ def Open(widget):
 		keybindData["Heavy Attack"] = MoveHeavyAttackTxt.get();
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
 			json.dump(keybindData, f, indent=4, sort_keys=False)
-		sys.exit(1)
+		# sys.exit(1)
 	# End
 	MoveHeavyAttackLabel = tk.Label(appMarg1, text="Heavy Attack:")
 	MoveHeavyAttackLabel.grid(row=10,column=1)
@@ -278,6 +278,6 @@ def Open(widget):
 	MoveHeavyAttackKey =ttk.Combobox(appMarg1, width=15, textvariable=MoveHeavyAttackTxt, state='readonly')
 	MoveHeavyAttackKey['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Down', 'DOWN', 'Up', 'UP', 'Left', 'LEFT', 'Right', 'RIGHT', 'Shift', 'SHIFT', 'Ctrl', 'CTRL', 'Esc', 'ESC', 'Alt', 'ALT', 'Space', 'SPACE', 'Enter', 'ENTER','Spacebar', 'SPACEBAR', 'Tab', 'TAB', 'Home', 'HOME', 'End', 'END', 'Plus', 'PLUS', 'Minus', 'MINUS', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Up arrow', 'Down arrow', 'Left arrow', 'Right arrow')
 	MoveHeavyAttackKey.grid(row=10,column=2)
-	MoveHeavyAttackKey.set('None')
+	MoveHeavyAttackKey.set(keybindData["Heavy Attack"])
 	MoveHeavyAttackUpdateButton = ttk.Button(appMarg1, text="Update", command=SaveMoveHeavyAttackKey)
 	MoveHeavyAttackUpdateButton.grid(row=10,column=3)

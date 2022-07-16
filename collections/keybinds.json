@@ -7,6 +7,6 @@
     "Dodge": "z",
     "Throw": "v",
     "Pickup": "v",
-    "Quick Attack": "LEFT",
-    "Heavy Attack": "RButton"
+    "Quick Attack": "c",
+    "Heavy Attack": "x"
 }

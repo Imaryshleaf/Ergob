@@ -273,16 +273,16 @@ if not os.path.exists(dirName):
 		print("Directory " , dirName ,  " Created ")
 		# # if json file not exist, create new one with this template
 		configTemplate = { 
-			"Move Up": "None",
-			"Move Down": "None",
-			"Move Left": "None",
-			"Move Right": "None",
-			"Jump": "None",
-			"Dodge": "None",
-			"Throw": "None",
-			"Pickup": "None",
-			"Quick Attack": "None",
-			"Heavy Attack": "None"
+			"Move Up": "Up",
+			"Move Down": "Down",
+			"Move Left": "Left",
+			"Move Right": "Right",
+			"Jump": "Space",
+			"Dodge": "z",
+			"Throw": "v",
+			"Pickup": "v",
+			"Quick Attack": "c",
+			"Heavy Attack": "x"
 		}
 		# write the template
 		with open (os.getcwd() + '/collections/keybinds.json', 'w+') as f:
@@ -309,7 +309,7 @@ if not os.path.exists(dirName):
 	LabelName.grid(row=1, column=1)
 	# Entry
 	UsernameTxt = StringVar(None)
-	EntryBox = EntryWithPlaceholder(AppFrame, placeholder="Bodvar", text=UsernameTxt, width=17, relief=FLAT)
+	EntryBox = EntryWithPlaceholder(AppFrame, placeholder="Mordex", text=UsernameTxt, width=17, relief=FLAT)
 	EntryBox.grid(row=1, column=2)
 	# Button
 	EnterButton = ttk.Button(AppFrame, text="OK", command=RegisterUsername)
@@ -327,22 +327,6 @@ if not os.path.exists(dirName):
 		sys.exit(1)
 		
 else:
-	import requests
-	def Login():
-		url = ""
-		data = {
-			"content" : f"**{UserDisplyName}** Logged-in to **Ergo B** <:emojiName:emojiID>" ,
-			# "username" : "Ergo B"
-		}
-		result = requests.post(url, json=data)
-		try:
-			result.raise_for_status()
-		except requests.exceptions.HTTPError as err:
-			print(err)
-		else:
-			print("Successfully login, code {}.".format(result.status_code))
-	# Login()
-	
 	try:
 		app = RunApplication
 		app()

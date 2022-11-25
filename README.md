@@ -5,3 +5,6 @@ A brawlhalla macro, designed for easy short combo to hard short combo. This proj
 Well, that's that. I don't have much words to say here. You can explore my python codes.
 
 Happy Coding :)
+
+Nice to meet you old people, Necode here!
+Sorry, I deleted my own server (Disproberry) without any notification.
